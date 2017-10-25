@@ -15,27 +15,29 @@ int main()
     setlocale(LC_ALL, "Portuguese");
 
 
-    system("color 6B");
-    printf("_________JOKENPO__________\n \n");
+    system("color 1B");
+    printf("************************************ \n");
+    printf("*****_________JOKENPO__________***** \n");
+    printf("************************************\n \n");
 
 
     //Sua escolha
         printf("Digite a opcao desejada: \n");
 
-        printf("1 - Pedra \n 2 - Papel \n 3 - Tesoura \n");
+        printf("1 - Pedra \n 2 - Papel \n 3 - Tesoura \n\n");
         scanf("%d", &opcao);
 
         switch(opcao){
             case 1:
-                printf("Você escolheu Pedra \n");
+                printf("Você escolheu Pedra. \n\n");
                 break;
 
             case 2:
-                printf("Você escolheu Papel \n");
+                printf("Você escolheu Papel. \n\n");
                 break;
 
             case 3:
-                printf("Você escolheu Tesoura \n");
+                printf("Você escolheu Tesoura. \n\n");
                 break;
         }
 
@@ -45,40 +47,40 @@ int main()
 
         switch(opcaopc){
             case 1:
-                printf("Computador escolheu Pedra \n");
+                printf("Computador escolheu Pedra. \n\n");
                 break;
 
             case 2:
-                printf("Computador escolheu Papel \n");
+                printf("Computador escolheu Papel. \n\n");
                 break;
 
             case 3:
-                printf("Computador escolheu Tesoura \n");
+                printf("Computador escolheu Tesoura. \n\n");
                 break;
 
         }
 
          //Declarando ganhador
          if (opcao == opcaopc){
-            printf("Deu empate \n");
+            printf("Ih, deu empate! \n\n");
 
          }else if (opcao==1 && opcaopc==2 ){
-            printf("Papel ganha de pedra, computador ganhou! \n");
+            printf("Papel ganha de pedra, computador ganhou! \n\n");
 
          }else if (opcao==2 && opcaopc ==3){
-             printf("Tesoura ganha de papel, computador ganhou! \n");
+             printf("Tesoura ganha de papel, computador ganhou! \n\n");
 
          }else if (opcao==1 && opcaopc==3){
-             printf("Pedra ganha de tesoura, você ganhou!!\n");
+             printf("Pedra ganha de tesoura, você ganhou!! \n\n");
 
          }else if (opcao==2 && opcaopc==1){
-             printf("Papel ganha de pedra, você ganhou! \n");
+             printf("Papel ganha de pedra, você ganhou! \n\n");
 
          }else if (opcao==3 && opcaopc==1){
-             printf("Pedra ganha de tesoura, computador ganhou!!\n");
+             printf("Pedra ganha de tesoura, computador ganhou! \n\n");
 
          }else if (opcao==3 && opcaopc==2){
-             printf("Tesoura ganha de papel, você ganhou! \n");
+             printf("Tesoura ganha de papel, você ganhou! \n\n");
          }
 
     system("pause");
