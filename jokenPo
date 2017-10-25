@@ -1,0 +1,86 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <time.h>
+
+
+int Pedra = 1;
+    int Papel = 2;
+    int Tesoura = 3;
+    int opcao;
+    int opcaopc;
+
+int main()
+{
+    setlocale(LC_ALL, "Portuguese");
+
+
+    system("color 6B");
+    printf("_________JOKENPO__________\n \n");
+
+
+    //Sua escolha
+        printf("Digite a opcao desejada: \n");
+
+        printf("1 - Pedra \n 2 - Papel \n 3 - Tesoura \n");
+        scanf("%d", &opcao);
+
+        switch(opcao){
+            case 1:
+                printf("Você escolheu Pedra \n");
+                break;
+
+            case 2:
+                printf("Você escolheu Papel \n");
+                break;
+
+            case 3:
+                printf("Você escolheu Tesoura \n");
+                break;
+        }
+
+        //Escolha do computador
+        srand(time(NULL));
+        opcaopc = ("%d", rand()%3 +1);
+
+        switch(opcaopc){
+            case 1:
+                printf("Computador escolheu Pedra \n");
+                break;
+
+            case 2:
+                printf("Computador escolheu Papel \n");
+                break;
+
+            case 3:
+                printf("Computador escolheu Tesoura \n");
+                break;
+
+        }
+
+         //Declarando ganhador
+         if (opcao == opcaopc){
+            printf("Deu empate \n");
+
+         }else if (opcao==1 && opcaopc==2 ){
+            printf("Papel ganha de pedra, computador ganhou! \n");
+
+         }else if (opcao==2 && opcaopc ==3){
+             printf("Tesoura ganha de papel, computador ganhou! \n");
+
+         }else if (opcao==1 && opcaopc==3){
+             printf("Pedra ganha de tesoura, você ganhou!!\n");
+
+         }else if (opcao==2 && opcaopc==1){
+             printf("Papel ganha de pedra, você ganhou! \n");
+
+         }else if (opcao==3 && opcaopc==1){
+             printf("Pedra ganha de tesoura, computador ganhou!!\n");
+
+         }else if (opcao==3 && opcaopc==2){
+             printf("Tesoura ganha de papel, você ganhou! \n");
+         }
+
+    system("pause");
+    return 0;
+    }
